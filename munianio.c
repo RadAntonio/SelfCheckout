@@ -1,12 +1,14 @@
 #include "munianio.h"
 #include <stdio.h>
 #include "ciupapi.h"
-#include <stdlib.h>
+#include "ciupicaros.h"
 
-
-float total1;
-int freq[100];
-int n;
+extern float total;
+extern float totalF;
+extern int freq[100];
+extern int n;
+extern int k;
+extern float totalD;
 
 void continueShopping() {
 
@@ -21,12 +23,20 @@ void continueShopping() {
 
     if (decision == 1) {
 
-        n=0;
-        table(7);
+        n = 0;
+
+        table(13);
         chooseYourBag();
-        total1=0;
+        totalD = 0;
+        total = 0;
         showYourTOtal();
 
+    }
+
+    if(decision == 0) {
+
+        k = 0;
+        buyADrink();
     }
 }
 void combo1(){
@@ -35,11 +45,11 @@ void combo1(){
 
     if( freq[1] == 3 && freq[6] == 2 ) {
 
-            printf ("Congratulations!! You bought the combo with 3 biscuiti and 2 margarine so you will get 10%% off your pourchase\n");
-            totaln = total1 - (total1 / 10);
+            printf ("Congratulations!! You bought the combo with 3 Hamburgers and 2 snack Wraps so you will get 10%% off your pourchase\n");
+            totaln = totalF - ( totalF / 10);
 
-            printf( "Totalul nou este %.2f\n",totaln);
-        total1 = totaln;
+            //printf( "The new total is %.2f\n",totaln);
+            totalF = totaln;
 
         }
 }
@@ -49,11 +59,11 @@ void combo2() {
 
     if( freq[2] == 1 && freq[3] == 2 ) {
 
-            printf ("Congratulations!! You bought the combo with 1 bomboane and 2 inghetatat so you will get 20%% off your pourchase\n");
-            totaln = total1 - (2 * (total1 / 10));
+            printf ("Congratulations!! You bought the combo with 1 Big Mac and 2 McDoubles so you will get 20%% off your pourchase\n");
+            totaln = totalF -(2*( totalF / 10));
 
-            printf( "Totalul nou este %.2f\n",totaln);
-        total1 = totaln;
+            //printf( "The New total is %.2f\n",totaln);
+                        totalF = totaln;
 
 
         }
@@ -65,6 +75,8 @@ int year;
 int day;
 
 void yourBDay() {
+
+
 
     printf ("Enter the date of your birthday\n");
     printf ("Day: ");
@@ -110,7 +122,7 @@ void yourBDay() {
 
         }
 
-        if (month == 4 || month == 5 || month == 7 || month == 9 || month == 11) {  // aici verific daca e luna cu 30 de zile
+        if (month == 4 || month == 6 || month == 9 || month == 11) {  // aici verific daca e luna cu 30 de zile
 
             if (year > 1910 && year < 2018) {
 
@@ -229,15 +241,17 @@ void birthdayDis() {        //discount daca suma datelor in data ta de nastere e
 
     if ((day + month + year) % 2 == 0) {
 
+        printf("\n");
         printf ("Congrats, becuase ur birthday is an even numebr, u get 20%% off your bag!\n");
 
-        totaln = total1 - (2 * (total1 / 10));
+        totaln = totalF -(2*( totalF / 10));
 
-            printf( "Totalul nou este %.2f\n",totaln);
-        total1 = totaln;
+            //printf( "The new total is %.2f\n",totaln);
+                    totalF = totaln;
     }else {
 
-        printf("te ai nascut cu o zi prea repede asa ca nu iti putem oferi discountul cu suma numerelor din data ta de nastere sa fie numar par\n");
+        printf("\n");
+        printf("Beacuse your birthday date is not an even number we cant give you a special discount...\n");
 
 
     }

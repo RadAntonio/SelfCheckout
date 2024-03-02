@@ -9,14 +9,14 @@
 /****************************************************************/
 
 
-#ifndef MUNIANIO_H
-#define MUNIANIO_H
+#ifndef FACIOCAFEA_H
+#define FACIOCAFEA_H
 
+void randomComboPrint(); //1
+void randomCombo(); //2
+void combo3(); //3
+void combo4(); //4
+void combo5(); //5
 
-void continueShopping();//1
-void combo1();//2
-void combo2();//3
-void yourBDay();//4
-void birthdayDis();//5
-void reEnterUrBday();//6
-#endif // MUNIANIO_H
+#endif // FACIOCAFEA_H
+
