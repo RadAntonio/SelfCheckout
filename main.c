@@ -19,7 +19,7 @@ int main()
     table(13); //line 9 we print the table
     chooseYourBag();
     showYourTOtal();
-   birthdayDis();
+    birthdayDis();
     no10FromFile();
     customerTen();
 
