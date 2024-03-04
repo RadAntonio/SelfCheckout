@@ -21,6 +21,7 @@ The Self-Checkout Simulation Program is a C-based software application designed 
    ```bash
    git clone https://github.com/RadAntonio/SelfCheckout.git
    ```
+2. Open CodeBlocks and run the project
 
 ## Contributing
 Contributions are welcome and greatly appreciated. If you have suggestions for improving this application, please fork the repo and create a pull request or open an issue.
